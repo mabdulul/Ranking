@@ -18,8 +18,7 @@ class Ranking{
        this.status_id = status_id;
 
     }
-     static async getAll (){
-
+    static async getAll (){
         try{
             const response = await db.any('select * from topics; ');
             console.log("response:", response)
@@ -29,7 +28,20 @@ class Ranking{
             return error.message;
         }
 
+    }
+    // getting the class status 
+    static async getClassStatus(){
+       try{
+           const response = await db.any('select * from class_status;');
+           console.log("This is class status:", response);
+           return response
+       }
+       catch(error){
+            return error.message;
      }
+    }
+
+
    /*  async updateTopicvalue(){
         try{
             // HTML id = 1 , CSS id = 2 , javascript id= 3, postgres id= 4 , node id = 5, express id = 6

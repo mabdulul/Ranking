@@ -1,8 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,400,500,700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 16px;
+ 
 }
 
-a {
-  color: #00B7FF;
+ul li{
+  display: inline;
+  padding: 1.5rem;
+  
+}
+.ranking-body{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.topics{
+  position: relative;
+  right: 150px;
+  font-weight: 500;
+}
+
+.topics tr td{
+  
+  padding: 1rem;
+  font-size: 1rem;
 }

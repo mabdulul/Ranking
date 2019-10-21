@@ -1,9 +1,15 @@
- <table>
+<ul>
+    ${dataStatus.map(status =>
+    `<li>${status.status_title}</li>`
+    ).join('')}
+</ul>
+<table class="topics">
     ${data.map(ranking => 
-         `
-         <tr>
-         <td>${ranking.topic_name}</td>
-         <td>${ranking.status_id}</td>
-        </tr>`
-        ).join('')}
-</table>   
+    `
+    <tr>
+        <td>${ranking.topic_name}</td>
+        <!-- <td>${ranking.status_id}</td> -->
+    </tr>`
+    ).join('')}
+</table> 
+
