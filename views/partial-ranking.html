@@ -1,15 +1,12 @@
-<ul>
-    ${dataStatus.map(status =>
-    `<li>${status.status_title}</li>`
-    ).join('')}
-</ul>
 <table class="topics">
-    ${data.map(ranking => 
-    `
     <tr>
+        <th></th>
+            ${dataStatus.map(status =>`<th>${status.status_title}</th>`).join('')}
+    </tr>
+    ${data.map(ranking => 
+    `<tr>
         <td>${ranking.topic_name}</td>
-        <!-- <td>${ranking.status_id}</td> -->
-    </tr>`
-    ).join('')}
+        ${dataStatus.map(status =>`<td><input type="radio" name="test" value="'${status.rank}'"></td>`)}
+    </tr>`).join('')}
 </table> 
 
