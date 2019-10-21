@@ -1,0 +1,9 @@
+ <table>
+    ${data.map(ranking => 
+         `
+         <tr>
+         <td>${ranking.topic_name}</td>
+         <td>${ranking.status_id}</td>
+        </tr>`
+        ).join('')}
+</table>   

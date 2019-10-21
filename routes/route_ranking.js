@@ -4,11 +4,12 @@ const express = require('express'),
 
 router.get("/", async function(req,res, next){
         const rankingData = await RankingModel.getAll();
-        console("ranking data", rankingData);
+        console.log("This is ranking data", rankingData);
     res.status(200)
-    render('template',{
+    .render('template',{
         locals:{
             title: "Rate how you feel about each topic",
+            data: rankingData
            
         },
         partials: {
